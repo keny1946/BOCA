@@ -1,0 +1,52 @@
+<div class="b-example-divider"></div>
+<div class="sidebar py-3 " style="background-color: white;">
+
+  <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; background-color: white;">
+     <a href="" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+       <img src="../../../assets/images/logo.png" alt="" class="rounded mx-auto d-block">
+     </a>
+     <hr>
+     <ul class="nav nav-pills flex-column mb-auto">
+
+       <li class="nav-item">
+         <a href="" routerLink="/dashboard/problems" class="nav-link link-dark">
+
+           <fa-icon [icon]="faExclamationCircle"></fa-icon> Problems
+         </a>
+       </li>
+       <li class="nav-item">
+         <a href="" routerLink="/dashboard/language" class="nav-link link-dark">
+
+           <fa-icon [icon]="faGlobeEurope" ></fa-icon> Languages
+         </a>
+       </li>
+
+       <li class="nav-item">
+         <a href="" routerLink="/dashboard/site" class="nav-link link-dark">
+
+           <fa-icon [icon]="faWaveSquare"></fa-icon> Site
+         </a>
+       </li>
+       <li class="nav-item">
+         <a href="" routerLink="/dashboard/contest" class="nav-link link-dark">
+
+           <fa-icon [icon]="faChartLine"></fa-icon> Contest
+         </a>
+       </li>
+
+       <li class="nav-item">
+         <a href="" routerLink="/dashboard/options" class="nav-link link-dark">
+
+           <fa-icon [icon]="faFilter"></fa-icon> Options
+         </a>
+       </li>
+       <li class="nav-item">
+         <a href="" (click)="logout" class="nav-link link-dark">
+
+           <fa-icon [icon]="faSignOutAlt"></fa-icon>&nbsp; Logout
+         </a>
+       </li>
+     </ul>
+   </div>
+</div>
+

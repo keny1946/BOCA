@@ -1,0 +1,14 @@
+#campo{
+  font-weight: bold;
+  background-color: #f0f4fc;
+}
+label{
+  color: gray;
+}
+.container{
+  border: 1em;
+  margin: 2em;
+  padding: 2em;
+  background-color: white;
+  border-radius: 1em;
+}

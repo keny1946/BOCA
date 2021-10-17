@@ -1,0 +1,79 @@
+<div class="col-12 mt-12">
+  <div class="container">
+    <h1 class="text-center mt-4">Language</h1>
+    <div class="row justify-content-center">
+        <div class="col-0">
+            <table id="tableLanguages" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th colspan="2" scope="col">Actions</th>
+                        <th scope="col">Language #</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Extension</th>
+                    </tr>
+                    <tr>
+                        <th class="text-center" colspan="2"><button (click)="log()" class="btn btn-primary fw-bold px-5">+</button>
+                        </th>
+                        <td><input id="numeroLanguage" [(ngModel)]="numeroLanguage"  type="number" placeholder="Language" class="form-control"></td>
+                        <td><input id="name" [(ngModel)]="name"  type="text" placeholder="Name" class="form-control"></td>
+                        <td><input id="extension" [(ngModel)]="extension"  type="text" placeholder="Extension" class="form-control"></td>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                    <tr id="1">
+                        <td class="text-center"><a id="edit" class="text-black text-decoration-none text fw-bold"
+                                onclick="EditObject(1,'C','c')">Edit</a></td>
+                        <td class="text-center"><a id="delete" class="text-black text-decoration-none text fw-bold"
+                                onclick="DeleteObject('C')">Delete</a></td>
+                        <td>1</td>
+                        <td>C</td>
+                        <td>c</td>
+                    </tr>
+                    <tr id="2">
+                        <td class="text-center"><a id="edit" class="text-black text-decoration-none text fw-bold"
+                            onclick="EditObject(2,'Java','java')">Edit</a></td>
+                    <td class="text-center"><a id="delete" class="text-black text-decoration-none text fw-bold"
+                            onclick="DeleteObject('Java')">Delete</a></td>
+                        <td>2</td>
+                        <td>Java</td>
+                        <td>java</td>
+                      </tr>
+
+                      <tr id="2"  *ngFor="let item of datos; let i=index">
+                      <td class="text-center"><a id="edit" class="text-black text-decoration-none text fw-bold"
+                          >Edit</a></td>
+                  <td class="text-center"><a id="delete" (click)="eliminar(i)" class="text-black text-decoration-none text fw-bold"
+                          >Delete</a></td>
+                      <td>{{ item.numeroLanguage }}</td>
+                      <td>{{ item.name }}</td>
+                      <td>{{ item.extension }}</td>
+                  </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="text-center text-"><span class="text-danger fw-bold">WARNING:</span> deleting a language will remove
+            EVERYTHING related to it. It is not recommended to change anything while the contest is running</p>
+        <div class="col-auto">
+            <label className="mx-2 my-2">
+                Number:
+                <input id="number" class="form-control" type="number"disabled>
+            </label>
+            <label class="mx-2 my-2">
+                Name:
+                <input id="nameEdit" class="form-control" type="text" disabled>
+            </label>
+            <label class="mx-2 my-2">
+                Extension:
+                <input id="extEdit" class="form-control" type="text" disabled>
+            </label>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto mt-4">
+            <button onclick="Send()" id="send" class="btn btn-primary mx-3" disabled>SEND</button>
+            <button onclick="Clear()" id="clear" class="btn btn-primary" disabled>CLEAR</button>
+        </div>
+
+    </div>
+</div>
+</div>
