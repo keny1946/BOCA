@@ -27,11 +27,11 @@ export class ProblemsComponent implements OnInit {
   }
   problems() {
     const datosProblemas = {
-      numberProblem: this.problem,
-      fullName: this.full,
-      baseName: this.base,
-      descFile: this.desc,
-      filePackage: this.package,
+      problem: this.problem,
+      full: this.full,
+      base: this.base,
+      desc: this.desc,
+      package: this.package,
       color: this.color
     };
     this.datos.push(datosProblemas);
